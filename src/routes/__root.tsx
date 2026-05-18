@@ -7,7 +7,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'EarthBloom — Pure Natural Care' },
+      { title: 'Sthriyah — Pure Natural Care' },
       {
         name: 'description',
         content:
@@ -32,7 +32,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
               <div>
                 <h3 className="font-bold text-[#6aab7e] mb-3 uppercase text-xs tracking-widest">
-                  EarthBloom
+                  Sthriyah
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
                   Premium biodegradable sanitary care made from bamboo, wood, corn, and banana
@@ -63,7 +63,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             <div className="border-t border-white/10 pt-6 text-center text-white/40 text-xs">
-              © {new Date().getFullYear()} EarthBloom. All rights reserved. Gentle on you. Kind to
+              © {new Date().getFullYear()} Sthriyah. All rights reserved. Gentle on you. Kind to
               Earth.
             </div>
           </div>

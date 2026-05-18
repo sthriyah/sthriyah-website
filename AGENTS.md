@@ -1,10 +1,10 @@
 # AGENTS.md
 
-This document describes the architecture and conventions of the EarthBloom e-commerce project for AI agents and developers.
+This document describes the architecture and conventions of the Sthriyah e-commerce project for AI agents and developers.
 
 ## Project Overview
 
-EarthBloom is an e-commerce store selling biodegradable sanitary pads and panty liners. Products come in four materials (bamboo, wood, corn, banana) and multiple size/pack-count variants. Checkout is handled by Stripe.
+Sthriyah is an e-commerce store selling biodegradable sanitary pads and panty liners. Products come in four materials (bamboo, wood, corn, banana) and multiple size/pack-count variants. Checkout is handled by Stripe.
 
 ## Directory Structure
 
