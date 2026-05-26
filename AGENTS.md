@@ -37,7 +37,7 @@ ProductVariant {
   sku: string          // unique identifier e.g. "BAMB-XL-6"
   size: 'L' | 'XL' | 'XXL' | 'XXXL' | 'One Size'
   packSize: number     // 6, 12, 10, 20
-  price: number        // in cents (USD)
+  price: number        // in rupees (INR)
   dimensions?: string  // e.g. "280mm with double wings"
 }
 
