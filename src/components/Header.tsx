@@ -11,7 +11,7 @@ export function Header() {
               <Leaf className="w-4 h-4 text-white" />
             </div>
             <div>
-              <span className="text-xl font-bold tracking-tight">Sthriyah</span>
+              <span className="text-xl font-bold tracking-tight">EarthBloom</span>
               <span className="hidden sm:block text-[10px] text-[#6aab7e] font-medium tracking-widest uppercase -mt-1">
                 Pure Natural Care
               </span>
