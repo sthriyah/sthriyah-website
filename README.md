@@ -1,4 +1,4 @@
-# EarthBloom — Pure Natural Care
+# Sthriyah — Pure Natural Care
 
 A modern e-commerce store selling biodegradable sanitary pads and panty liners made from natural plant fibres. Built with TanStack Start and deployed on Netlify.
 
