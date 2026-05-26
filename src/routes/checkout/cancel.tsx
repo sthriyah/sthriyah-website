@@ -15,7 +15,7 @@ function CheckoutCancel() {
         <div className="flex items-center justify-center gap-2 mb-2">
           <Leaf className="w-4 h-4 text-[#4a7c59]" />
           <span className="text-[#4a7c59] text-xs font-semibold tracking-widest uppercase">
-            EarthBloom
+            Sthriyah
           </span>
         </div>
         <h1 className="text-3xl font-bold text-[#1a3a1f] mb-3">Checkout Cancelled</h1>
