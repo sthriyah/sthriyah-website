@@ -43,19 +43,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+  
       - name: Setup Node.js (for deploy step)
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-
-      - name: Restore built site (from workspace)
-        # If your build outputs to dist/, just use that. Adjust if different.
-        run: echo "Using dist/ as publish dir"
-
+  
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          # optional: specify publish_dir if needed; default is ./public
-          publish_dir: ./dist
+          publish_dir: ./dist/client
+
