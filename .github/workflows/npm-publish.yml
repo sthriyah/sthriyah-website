@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  Optional: opt into Node 24 for actions now (remove if you don't want this)
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 permissions:
   contents: write
   pages: write
@@ -15,12 +19,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      page_dir: ${{ steps.build.outputs.page_dir }}
+      page_dir: ./dist/client
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Use Node.js 20
+      - name: Use Node.js for build
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
@@ -43,15 +47,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-  
-      - name: Setup Node.js (for deploy step)
+
+      - name: Setup Node.js (for deploy)
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-  
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
           publish_dir: ./dist/client
-
