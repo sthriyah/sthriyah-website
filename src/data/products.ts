@@ -2,7 +2,7 @@ export interface ProductVariant {
   sku: string
   size: 'L' | 'XL' | 'XXL' | 'XXXL' | 'One Size'
   packSize: number
-  price: number // in cents (USD)
+  price: number // in rupees (INR)
   dimensions?: string
 }
 

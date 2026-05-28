@@ -170,7 +170,7 @@ function RouteComponent() {
             <div className="bg-[#e8f0ea] rounded-2xl p-5 mb-6">
               <div className="flex items-end gap-3">
                 <span className="text-4xl font-bold text-[#1a3a1f]">
-                  ${(selectedVariant.price / 100).toFixed(2)}
+                  ₹{(selectedVariant.price ).toFixed(2)}
                 </span>
                 <span className="text-[#4a7c59] text-sm mb-1">
                   Pack of {selectedVariant.packSize}
@@ -240,7 +240,7 @@ function RouteComponent() {
                     <span
                       className={`block text-xs font-normal ${selectedVariant.sku === variant.sku ? 'text-white/70' : 'text-[#4a7c59]/60'}`}
                     >
-                      ${(variant.price / 100).toFixed(2)}
+                      ₹{(variant.price).toFixed(2)}
                     </span>
                   </button>
                 ))}

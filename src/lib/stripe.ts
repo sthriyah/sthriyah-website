@@ -37,7 +37,7 @@ export const createCheckoutSession = createServerFn({
       line_items: [
         {
           price_data: {
-            currency: 'usd',
+            currency: 'inr',
             product_data: {
               name: `${product.name} (${variantLabel})`,
               description: product.shortDescription,
