@@ -1,0 +1,60 @@
+name: CI & Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  Optional: opt into Node 24 for actions now (remove if you don't want this)
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      page_dir: ./dist/client
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Use Node.js for build
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          CI: true
+
+  deploy:
+    if: ${{ !startsWith(github.ref, 'refs/pull/') && github.event_name != 'pull_request' }}
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js (for deploy)
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24.x'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+        with:
+          publish_dir: ./dist/client
