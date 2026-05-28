@@ -77,7 +77,7 @@ function ProductCard({ product }: { product: Product }) {
           <div>
             <span className="text-xs text-[#4a7c59]/60 block">from</span>
             <span className="text-xl font-bold text-[#1a3a1f]">
-              ${(lowestPrice / 100).toFixed(2)}
+              ₹{(lowestPrice).toFixed(2)}
             </span>
           </div>
           <div className="text-sm font-semibold text-[#4a7c59] group-hover:text-[#1a3a1f] transition-colors flex items-center gap-1">
